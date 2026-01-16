@@ -55,10 +55,7 @@ export default function Home() {
           </section>
           {/* <section id="about">
             <AboutSection />
-          </section> */}
-          <section id="pricing">
-            <PricingSection />
-          </section>
+          // </section> */}
           <section id="floor-plan">
             <FloorPlanSection />
           </section>

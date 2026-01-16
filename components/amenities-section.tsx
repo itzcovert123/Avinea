@@ -54,7 +54,7 @@ const amenities = [
 ]
 
 export default function AmenitiesSection() {
-  const whatsappNumber = "918237311365"
+  const whatsappNumber = "919657119798"
 
   return (
     <section

@@ -37,26 +37,13 @@ export default function Footer() {
 
           <div className={`md:col-span-2 flex justify-between items-center px-4 ${entranceClasses}`}>
             <Image 
-              src="/QRf.webp" 
+              src="/QR.webp" 
               alt="QR Code" 
               width={128} 
               height={128} 
               className="h-32 w-32 object-contain rounded-md" 
             />
-            <Image 
-              src="/qr1.webp" 
-              alt="QR Code" 
-              width={128} 
-              height={128} 
-              className="h-32 w-32 object-contain rounded-md" 
-            />
-            <Image 
-              src="/qr2.webp" 
-              alt="QR Code" 
-              width={128} 
-              height={128} 
-              className="h-32 w-32 object-contain rounded-md" 
-            />
+        
           </div>
         </div>
 

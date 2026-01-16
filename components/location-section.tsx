@@ -7,30 +7,15 @@ import { MapPin } from "lucide-react"
 
 const projects = [
   {
-    name: "Marvilla",
-    directionsLink: "https://www.google.com/maps/dir/?api=1&destination=Mantra+Marvilla+Pune",
-    mapsLink: "https://maps.app.goo.gl/1KkWvpXjm76UXLWm6",
+    name: "Vyom Sigma Avinea Hadapsar",
+    directionsLink: "https://www.google.com/maps/search/avinea+vyom+sigma+hadapsar/@18.5096804,73.9389567,1052m/data=!3m2!1e3!4b1?entry=ttu&g_ep=EgoyMDI2MDExMy4wIKXMDSoASAFQAw%3D%3D",
+    mapsLink: "https://www.google.com/maps/search/avinea+vyom+sigma+hadapsar/@18.5096804,73.9389567,1052m/data=!3m2!1e3!4b1?entry=ttu&g_ep=EgoyMDI2MDExMy4wIKXMDSoASAFQAw%3D%3D",
 
     // ⚠ Replace this with the REAL embed link copied from Google Maps → Share → Embed a map
     embedSrc:
-      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.7754966115198!2d73.9325263!3d18.5299548!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c3c9c5819add%3A0x62892ffc1bcf1393!2sMantra%20Marvilla!5e0!3m2!1sen!2sin!4v1701540330000!5m2!1sen!2sin",
+      "https://www.google.com/maps?q=avinea+vyom+sigma+hadapsar&output=embed",
   },
-  {
-    name: "Mayfair",
-    directionsLink: "https://www.google.com/maps/dir/?api=1&destination=Mayfair+River+Residences",
-    mapsLink: "https://maps.app.goo.gl/L5BaWCVznYcFK3ea7",
-
-    embedSrc:
-      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.820941350881!2d73.921452!3d18.5366233!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c13c30d779e1%3A0x6da0163556d04b25!2sMayfair%20River%20Residences%20By%20Burgundy!5e0!3m2!1sen!2sin!4v1733172600000!5m2!1sen!2sin",
-  },
-  {
-    name: "One Residences",
-    directionsLink: "https://www.google.com/maps/dir/?api=1&destination=One+Residences+Burgundy",
-    mapsLink: "https://maps.app.goo.gl/SMkCj51RAwoL14KVA",
-
-    embedSrc:
-      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.7754966115198!2d73.9264545!3d18.5237458!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c18fd78da239%3A0x5071507dbaf4cc3d!2sOne%20residences%20by%20Burgundy!5e0!3m2!1sen!2sin!4v1701540330000!5m2!1sen!2sin",
-  },
+  
 ]
 
 export default function LocationSection() {

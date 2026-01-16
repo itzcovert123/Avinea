@@ -2,8 +2,8 @@ import { Download } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 export default function DownloadBrochureButton() {
-  const phone = "8237311365"
-  const message = "Send me a brochure of Burgundy"
+  const phone = "9657119798"
+  const message = "Send me a brochure of Vyom Sigma Avinea Hadapsar."
 
   const whatsappUrl = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`
 

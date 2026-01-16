@@ -7,8 +7,8 @@ export default function FloatingActionButtons() {
       icon: MessageCircle,
       label: "WhatsApp",
       color: "bg-green-500 hover:bg-green-600 focus:bg-green-600",
-      href: `https://wa.me/8237311365?text=${encodeURIComponent(
-        "Send me details of Mantra Burgundy series"
+      href: `https://wa.me/9657119798?text=${encodeURIComponent(
+        "Send me details of Vyom Sigma Avinea Hadapsar"
       )}`,
       target: "_blank",
     },
@@ -16,14 +16,14 @@ export default function FloatingActionButtons() {
       icon: Phone,
       label: "Call",
       color: "bg-blue-500 hover:bg-blue-600 focus:bg-blue-600",
-      href: "tel:+918237311365",
+      href: "tel:+919657119798",
       target: "_self",
     },
     {
       icon: Car,
       label: "Uber",
       color: "bg-black hover:bg-gray-800 focus:bg-gray-800",
-      href: `https://wa.me/8237311365?text=${encodeURIComponent(
+      href: `https://wa.me/9657119798?text=${encodeURIComponent(
         "Book Uber for me "
       )}`,
       target: "_blank",

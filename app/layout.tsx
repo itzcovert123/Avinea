@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://mantra-burgundy-best-deals.com'),
 
   title: {
-    default: 'Mantra Burgundy Luxury Collection | Marvilla, 1 Residences & Mayfair | Exclusive Offers & Info',
+    default: 'Vyom Sigma Avinea Hadapasar Pune| Exclusive Offers & Info',
     template: '%s | Mantra Burgundy Best Deals',
   },
 
