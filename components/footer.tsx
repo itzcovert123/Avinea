@@ -15,8 +15,8 @@ export default function Footer() {
             <div className="flex items-center space-x-2">
               <div className="bg-white p-2 rounded-md flex items-center justify-center">
                 <Image
-                  src="/logo.png"
-                  alt="Mantra Burgundy Logo"
+                  src="/logo.webp"
+                  alt="Avinea Logo"
                   width={200}
                   height={56}
                   className="h-14 w-auto rounded-md object-contain"
@@ -26,11 +26,11 @@ export default function Footer() {
             <div className="space-y-2 text-primary-foreground/80 text-sm">
               <div className="flex items-center">
                 <MapPin className="w-4 h-4 mr-2" />
-                <span>Mantra Burgundy</span>
+                <span>Vyom Sigma Avinea</span>
               </div>
               <div className="flex items-center">
                 <Phone className="w-4 h-4 mr-2" />
-                <span>+91 8237311365</span>
+                <span>+91 9657119798</span>
               </div>
             </div>
           </div>
