@@ -128,7 +128,7 @@ export default function AmenitiesSection() {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href={`https://wa.me/${whatsappNumber}?text=Schedule%20me%20tour%20of%20Burgundy%20Series`}
+                href={`https://wa.me/${whatsappNumber}?text=Schedule%20me%20tour%20of%Avinea%20Project`}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Schedule a tour through WhatsApp"

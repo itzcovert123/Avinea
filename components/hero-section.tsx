@@ -1,9 +1,23 @@
+"use client"
+
 import { ChevronDown } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
+import { useState, useEffect } from "react"
 
 export default function HeroSection() {
   
+  const [currentSlide, setCurrentSlide] = useState(0)
+  const slides = ["/slider1.webp", "/slider2.webp"]
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length)
+    }, 5000) // Switch every 5 seconds
+
+    return () => clearInterval(interval)
+  }, [slides.length])
+
   const contentBaseClasses = "relative z-10 text-center text-white px-4 sm:px-6 max-w-4xl mx-auto"
 
   return (
@@ -17,19 +31,24 @@ export default function HeroSection() {
         bg-black
       "
     >
-      {/* Background Image */}
+      {/* Background Slider */}
       <div className="absolute inset-0 z-0 w-full h-full">
-        <Image
-          src="/mantrabgg.webp"
-          alt="Luxury Estate representing Burgundy Luxuries"
-          fill
-          fetchPriority="high"
-          priority
-          quality={75}
-          className="object-cover object-center"
-          sizes="100vw"
-          draggable={false}
-        />
+        {slides.map((src, index) => (
+          <Image
+            key={src}
+            src={src}
+            alt={`Slide ${index + 1}`}
+            fill
+            fetchPriority="high"
+            priority
+            quality={75}
+            className={`object-cover object-center absolute inset-0 transition-opacity duration-1000 ${
+              index === currentSlide ? 'opacity-100' : 'opacity-0'
+            }`}
+            sizes="100vw"
+            draggable={false}
+          />
+        ))}
         {/* Dark Overlay */}
         <div className="absolute inset-0 bg-black/40 z-10" /> 
       </div>
@@ -74,7 +93,7 @@ export default function HeroSection() {
         </div>
       </div>
 
-      {/* Scroll Indicator - Removed animate-bounce and transition-colors */}
+      {/* Scroll Indicator */}
       <a 
         href="#about"
         className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white hover:text-primary z-20"
