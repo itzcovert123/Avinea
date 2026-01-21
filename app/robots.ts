@@ -14,6 +14,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ['/api/', '/_next/', '/private/'], 
       },
     ],
-    sitemap: 'https://mantra-burgundy-best-deals.com/sitemap.xml',
+    sitemap: 'https://avinea-hadpsar.com/sitemap.xml',
   }
 }

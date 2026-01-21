@@ -12,74 +12,50 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://mantra-burgundy-best-deals.com'),
-
+  // 1. Core SEO
   title: {
-    default: 'Vyom Sigma Avinea Hadapasar Pune| Exclusive Offers & Info',
-    template: '%s | Mantra Burgundy Best Deals',
+    default: 'Avinea Vyom Sigma Hadapsar | Luxury 2, 3, 4 & 6.5 BHK Apartments',
+    template: '%s | Avinea Vyom Sigma Pune',
   },
-
-  description:
-    "Experience luxury at Mantra Burgundy: Marvilla Villas, 1 Residences & Mayfair.Best Deals Guaranteed.Request Price Sheet, Brochure & Floor Plans for Mundhwa Projects.",
-
+  description: 'Experience ultra-luxury at Avinea Vyom Sigma by Vyom Sigma Buildcon. G+32 storeys in Hadapsar, Pune with 55+ amenities, Mi-Van tech, and 65% green space. Starting ₹1.29 Cr.',
   keywords: [
-    // --- TOP PRIORITY PROJECTS ---
-    "Mantra Burgundy",
-    "Mantra Marvilla",
-    "Mantra 1 Residences",
-    "Mantra One Residences",
-    "Mantra Mayfair",
-    "Mantra Mirari",
-    "Mantra Magnus",
-
-    // --- SPECIFIC UNIT TYPES (High Intent) ---
-    "Penthouse flat in Mantra 1 Residences",
-    "Penthouse flat in Mantra Mayfair",
-    "Luxury villas 5 BHK Mundhwa Pune",
-    "3.5 BHK flat in Mantra 1 Residences",
-    "4.5 BHK flat in Mantra one Residences",
-    "4 BHK flat in Mantra Mayfair",
-
-
-    "Real estate Mundhwa 411036",        // Home Location
-    "Luxury projects in Viman Nagar 411014",
-    "Flats in Hadapsar 411028",
-    "Apartments in Lohgaon 411047",
-    "Villas in Wagholi 412207",
-    "Projects in Undri 411060",
-    "Homes in Baner 411045",
-    "Flats in Hinjewadi 411057",
-    "Properties in Tathawade 411033",
-    "Projects in Bavdhan 411021",
-    "Flats in Kothrud 411038",
-    "Villas in Warje 411058",
-    "Real estate Kondhwa 411048",
-    "Properties in Pune City 411002",
-    "Flats in Sadashiv Peth 411030",
-
-    // --- INVESTOR TARGETING (Intent Based) ---
-    "Luxury property investment Pune",
-    "Buy Pune flats from Mumbai",
-    "NRI property investment Pune",
-    "Pune luxury homes for Mumbai buyers",
-    "Holiday homes near Mumbai",
-    "Real estate investment for NRIs",
-
-    // --- BRANDED VARIATIONS ---
-    "Mantra Burgundy One Residences",
-    "1 Residences by Burgundy Mantra",
-    "Mayfair by Mantra Pune"
+    'avinya vyom sigma', 'avinea vyom sigma hadapsar', 'Avinea Vyom buildcon Hadapsar',
+    'vyom sigma avinya pune', 'vyom sigma avinea pune', 'avinya pune apartments',
+    'avinea pune apartments', 'avinya hadapsar flats', 'Avinea hadapsar flats',
+    'avinya vyom sigma price', 'avinya vyom sigma brochure', 'Avinea vyom sigma site visit',
+    'Holystico Astrana', 'Luxury flats in Hadapsar', '3 BHK flats near Amanora Mall'
   ],
 
-  // Authorship - REPLACED to generic/descriptive names
-  authors: [{ name: 'Mantra Burgundy Best Deals' }],
-  creator: 'Pune Luxury Real Estate',
-  publisher: 'Mantra Burgundy Best Deals',
+  // 2. Open Graph (Social Media Sharing)
+  openGraph: {
+    title: 'Avinea Vyom Sigma | Ultra-Luxury Living in Hadapsar, Pune',
+    description: '7 Tectonic Towers (Altair to Avalon) with 115m glass elevation. 3-side open flats, 12,000 sq.ft fitness center, and IGBC 5-star rating.',
+    url: 'https://avinea-hadpsar.com/', // Replace with actual URL
+    siteName: 'Avinea Vyom Sigma',
+    images: [
+      {
+        url: '/images/avinea-vyom-sigma-exterior.jpg', // Path to your main render
+        width: 1200,
+        height: 630,
+        alt: 'Avinea Vyom Sigma Tower Elevation',
+      },
+    ],
+    locale: 'en_IN',
+    type: 'website',
+  },
 
+  // 3. Twitter Metadata
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Avinea Vyom Sigma Hadapsar - Premium 2 to 6.5 BHK',
+    description: 'Mi-Van construction, 55+ world-class amenities, and proximity to Magarpatta IT Park. Possession Dec 2028.',
+    images: ['/images/twitter-card.jpg'],
+  },
+
+  // 4. Search Engine Directives
   robots: {
     index: true,
     follow: true,
-    nocache: false,
     googleBot: {
       index: true,
       follow: true,
@@ -89,58 +65,16 @@ export const metadata: Metadata = {
     },
   },
 
-  openGraph: {
-    type: 'website',
-    locale: 'en_IN',
-    url: 'https://mantra-burgundy-best-deals.com/',
-    siteName: 'Mantra Burgundy - Project Highlights & Deals',
-    title: 'Mantra Burgundy: Marvilla, 1 Residences, Mayfair | Pricing & Availability',
-    description:
-      // REPLACED: "Authorized Sales Partner" -> "Book Your Site Visit"
-      "Request Pricing for Mantra Marvilla Villas, 1 Residences & Mayfair. 3, 4, 5 BHK in Mundhwa. Book Your Site Visit Today.",
-    images: [
-      {
-        url: '/mantrabg',
-        width: 1200,
-        height: 630,
-        alt: 'Mantra Burgundy Luxury Villas and Apartments in Pune',
-      },
-    ],
-  },
-
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Mantra Burgundy Luxury Line | Villas & Penthouses',
-    description: "Check Availability: Premium 3-5 BHK & Penthouses in Mundhwa. Marvilla, 1 Residences & Mayfair.",
-    images: ['/mantrabg'],
-  },
-
+  // 5. App-specific and Verification
   verification: {
-    google: 'G26jIDFbIHv0bLdWLPC5F9y8BvXYsoL3kzztbZAyCWE',
+    google: 'your-google-verification-code', // Recommended for Search Console
   },
 
+  // 6. Project specific extras
   alternates: {
-    canonical: '/',
+    canonical: 'https://avinea-hadpsar.com/',
   },
-
-  category: 'Real Estate',
-
-  other: {
-    'geo.region': 'IN-MH',
-    'geo.placename': 'Pune',
-    'geo.position': '18.5302;73.9262',
-    'ICBM': '18.5302, 73.9262',
-    'target-locations': '411014, 411028, 411047, 412207, 411060, 411036, 411045, 411057, 411033, 411021, 411038, 411058, 411002, 411030, 411048, 400050, 400052, 400053, 400069, 400049, 400057, 400061, 400064, 400067, 400092, 400013, 400018, 400011, 400025, 400026, 400051, 400601, 400606, 400607, 421204, 421301, 400703, 400705, 400706, 400614, 410210, 410206, 440001, 440010, 440022, 440015, 422001, 422009, 422010, 422222, 431001, 431005, 431210, 110016, 110048, 110057, 560034, 560038, 500034, 500033, 500032, 600020, 600040, 600017'
-  },
-
-  icons: {
-    icon: [
-      { url: '/favicon.ico', sizes: 'any' },
-      { url: '/favicon.png', type: 'image/png' },
-    ],
-    apple: '/apple-touch-icon.png',
-  },
-}
+};
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const googleAdsId = process.env.GOOGLE_ADS_ID;
