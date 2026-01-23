@@ -90,16 +90,30 @@ export default function DiscountPopup({ isSubmitted, setIsSubmitted }: isSubmitP
 
   if (isSubmitted || !isVisible) return null
 
-  const modalClasses = `bg-gradient-to-br from-white to-slate-50/90 backdrop-blur-xl rounded-3xl shadow-2xl w-full max-w-[95vw] sm:max-w-xl md:max-w-4xl relative border border-white/60 flex flex-col md:flex-row transform transition-all duration-500 ease-out ${isTransitioning ? 'opacity-100 scale-100' : 'opacity-0 scale-95'} before:content-[\'.\'] before:absolute before:inset-0 before:rounded-3xl before:bg-gradient-to-r before:from-blue-500/10 before:to-purple-500/10 before:backdrop-blur-sm before:shadow-inner`
+  const modalClasses = `
+    bg-gradient-to-br from-white to-slate-50/90 backdrop-blur-xl rounded-3xl shadow-2xl w-full max-w-[95vw] sm:max-w-xl md:max-w-4xl relative border border-white/60 
+    flex flex-col md:flex-row 
+    transform transition-all duration-500 ease-out
+    ${isTransitioning ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}
+    before:content-[''] before:absolute before:inset-0 before:rounded-3xl before:bg-gradient-to-r 
+    before:from-blue-500/10 before:to-purple-500/10 before:backdrop-blur-sm before:shadow-inner
+  `
   
-  const overlayClasses = `fixed inset-0 min-h-screen bg-gradient-to-br from-slate-900/75 to-black/60 backdrop-blur-md z-50 flex items-center justify-center p-2 xs:p-4 transition-all duration-500 ease-out ${isTransitioning ? 'opacity-100' : 'opacity-0'}`
+  const overlayClasses = `
+    fixed inset-0 min-h-screen bg-gradient-to-br from-slate-900/75 to-black/60 backdrop-blur-md z-50 flex items-center justify-center p-2 xs:p-4 
+    transition-all duration-500 ease-out
+    ${isTransitioning ? 'opacity-100' : 'opacity-0'}
+  `
 
-  const closeButtonClasses = `group fixed top-6 right-6 z-[99] p-3 rounded-2xl bg-white/95 hover:bg-white/100 backdrop-blur-xl shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-110 active:scale-95 border border-slate-200/70 hover:border-slate-300 md:absolute md:top-3 md:right-3 md:z-10`
+  const closeBtnClasses = "group fixed top-6 right-6 z-[99] p-3 rounded-2xl bg-white/95 hover:bg-white/100 backdrop-blur-xl shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-110 active:scale-95 border border-slate-200/70 hover:border-slate-300 md:absolute md:top-3 md:right-3 md:z-10"
 
   return (
     <div className={overlayClasses} onClick={handleClose}>
       <div className={modalClasses} onClick={(e) => e.stopPropagation()}>
-        <button onClick={handleClose} className={closeButtonClasses}>
+        <button
+          onClick={handleClose}
+          className={closeBtnClasses}
+        >
           <X className="w-6 h-6 text-slate-700 group-hover:text-slate-900 transition-all duration-200" />
         </button>
 
@@ -113,12 +127,14 @@ export default function DiscountPopup({ isSubmitted, setIsSubmitted }: isSubmitP
               onClick={() => setShowTooltip((prev) => !prev)}
               className="group relative"
             >
-              <div className="p-3 rounded-2xl bg-white/95 hover:bg-white/100 shadow-xl hover:shadow-2xl backdrop-blur-xl cursor-pointer transition-all duration-300 group-hover:scale-110 hover:-translate-y-1 border border-slate-200/70 hover:border-slate-300">
+              <div className="p-3 rounded-2xl bg-white/95 hover:bg-white/100 shadow-xl hover:shadow-2xl backdrop-blur-xl cursor-pointer 
+              transition-all duration-300 group-hover:scale-110 hover:-translate-y-1 border border-slate-200/70 hover:border-slate-300">
                 <Info className="w-5 h-5 text-slate-700 group-hover:text-slate-900 transition-colors" />
               </div>
 
               {showTooltip && (
-                <div className="absolute top-14 left-0 w-72 bg-white/98 border border-slate-200/70 backdrop-blur-xl rounded-2xl shadow-2xl p-5 text-sm text-slate-700 z-30 animate-pulse">
+                <div className="absolute top-14 left-0 w-72 bg-white/98 border border-slate-200/70 backdrop-blur-xl rounded-2xl shadow-2xl 
+                p-5 text-sm text-slate-700 z-30 animate-pulse">
                   <div className="absolute -top-2 left-4 w-4 h-4 bg-white/98 rotate-45 border-b border-r border-slate-200/70"></div>
                   <h4 className="font-bold text-lg text-slate-900 mb-3 flex items-center gap-2">
                     📋 Terms & Conditions
@@ -139,7 +155,8 @@ export default function DiscountPopup({ isSubmitted, setIsSubmitted }: isSubmitP
           <div className="flex-1 p-6 sm:p-8 md:p-10 flex flex-col justify-center order-2 md:order-1 bg-gradient-to-b from-white/90 to-white/70">
             <div className="max-w-sm mx-auto w-full">
               <div className="text-center mb-8">
-                <h2 className="text-2xl sm:text-3xl md:text-4xl font-black bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 bg-clip-text text-transparent mb-3 drop-shadow-lg">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-black bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 
+                bg-clip-text text-transparent mb-3 drop-shadow-lg">
                   🎉 Exclusive Offer
                 </h2>
                 <p className="text-slate-600 text-sm sm:text-base font-semibold bg-gradient-to-r from-slate-500 to-slate-600 bg-clip-text">
@@ -155,14 +172,17 @@ export default function DiscountPopup({ isSubmitted, setIsSubmitted }: isSubmitP
                     Full Name *
                   </Label>
                   <div className="relative">
-                    <User className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400 group-focus-within:text-blue-500 transition-all duration-200" />
+                    <User className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400 
+                    group-focus-within:text-blue-500 transition-all duration-200" />
                     <Input
                       id="name"
                       type="text"
                       value={name}
                       onChange={(e) => setName(e.target.value)}
                       placeholder="Enter your full name"
-                      className="pl-12 h-14 text-lg border-2 border-slate-200/70 focus:border-blue-500 focus:ring-4 focus:ring-blue-500/20 text-slate-900 placeholder-slate-400 bg-white/80 backdrop-blur-sm w-full transition-all duration-300 hover:border-slate-300 hover:shadow-lg rounded-2xl font-semibold shadow-sm"
+                      className="pl-12 h-14 text-lg border-2 border-slate-200/70 focus:border-blue-500 focus:ring-4 focus:ring-blue-500/20 
+                      text-slate-900 placeholder-slate-400 bg-white/80 backdrop-blur-sm w-full transition-all duration-300 
+                      hover:border-slate-300 hover:shadow-lg rounded-2xl font-semibold shadow-sm"
                       autoComplete="name"
                     />
                   </div>
@@ -176,14 +196,17 @@ export default function DiscountPopup({ isSubmitted, setIsSubmitted }: isSubmitP
                     Email Address *
                   </Label>
                   <div className="relative">
-                    <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400 group-focus-within:text-emerald-500 transition-all duration-200" />
+                    <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400 
+                    group-focus-within:text-emerald-500 transition-all duration-200" />
                     <Input
                       id="email"
                       type="email"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       placeholder="your.email@example.com"
-                      className="pl-12 h-14 text-lg border-2 border-slate-200/70 focus:border-emerald-500 focus:ring-4 focus:ring-emerald-500/20 text-slate-900 placeholder-slate-400 bg-white/80 backdrop-blur-sm w-full transition-all duration-300 hover:border-slate-300 hover:shadow-lg rounded-2xl font-semibold shadow-sm"
+                      className="pl-12 h-14 text-lg border-2 border-slate-200/70 focus:border-emerald-500 focus:ring-4 focus:ring-emerald-500/20 
+                      text-slate-900 placeholder-slate-400 bg-white/80 backdrop-blur-sm w-full transition-all duration-300 
+                      hover:border-slate-300 hover:shadow-lg rounded-2xl font-semibold shadow-sm"
                       autoComplete="email"
                     />
                   </div>
@@ -197,14 +220,17 @@ export default function DiscountPopup({ isSubmitted, setIsSubmitted }: isSubmitP
                     Phone Number *
                   </Label>
                   <div className="relative">
-                    <Phone className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400 group-focus-within:text-orange-500 transition-all duration-200" />
+                    <Phone className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400 
+                    group-focus-within:text-orange-500 transition-all duration-200" />
                     <Input
                       id="phone"
                       type="tel"
                       value={phone}
                       onChange={(e) => setPhone(e.target.value)}
                       placeholder="10 digit mobile number"
-                      className="pl-12 h-14 text-lg border-2 border-slate-200/70 focus:border-orange-500 focus:ring-4 focus:ring-orange-500/20 text-slate-900 placeholder-slate-400 bg-white/80 backdrop-blur-sm w-full transition-all duration-300 hover:border-slate-300 hover:shadow-lg rounded-2xl font-semibold shadow-sm"
+                      className="pl-12 h-14 text-lg border-2 border-slate-200/70 focus:border-orange-500 focus:ring-4 focus:ring-orange-500/20 
+                      text-slate-900 placeholder-slate-400 bg-white/80 backdrop-blur-sm w-full transition-all duration-300 
+                      hover:border-slate-300 hover:shadow-lg rounded-2xl font-semibold shadow-sm"
                       maxLength={10}
                       autoComplete="tel"
                     />
@@ -212,25 +238,19 @@ export default function DiscountPopup({ isSubmitted, setIsSubmitted }: isSubmitP
                   {errors.phone && <p className="text-red-500 text-sm mt-2 font-semibold flex items-center gap-2">{errors.phone}</p>}
                 </div>
 
-                {/* 🔥 PERFECT reCAPTCHA FIX */}
-                <div className="pt-4 relative z-[9999] isolate">
-                  <div className="recaptcha-container bg-white border-2 border-slate-200/80 rounded-2xl p-6 shadow-2xl hover:shadow-3xl transition-all duration-300 hover:-translate-y-0.5">
-                    <ReCAPTCHA 
-                      sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ""} 
-                      ref={recaptchaRef}
-                    />
-                  </div>
-                  {errors.recaptcha && (
-                    <p className="text-red-500 text-sm mt-2 font-semibold flex items-center gap-2">
-                      {errors.recaptcha}
-                    </p>
-                  )}
+                {/* 🔥 FIXED reCAPTCHA - ONLY THIS CHANGED */}
+                <div className="pt-1 relative z-[9999] p-4 bg-white rounded-xl shadow-xl border">
+                  <ReCAPTCHA sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ""} ref={recaptchaRef} />
                 </div>
+                {errors.recaptcha && <p className="text-red-500 text-sm mt-2 font-semibold flex items-center gap-2">{errors.recaptcha}</p>}
 
                 {/* Submit Button */}
                 <Button
                   type="submit"
-                  className="w-full h-14 text-xl font-black bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 hover:from-slate-800 hover:via-blue-800 hover:to-slate-800 hover:shadow-2xl hover:-translate-y-1 active:bg-slate-700 active:translate-y-0 shadow-xl transition-all duration-300 text-white rounded-2xl ring-4 ring-transparent hover:ring-blue-500/30 backdrop-blur-sm flex items-center justify-center gap-2"
+                  className="w-full h-14 text-xl font-black bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 
+                  hover:from-slate-800 hover:via-blue-800 hover:to-slate-800 hover:shadow-2xl hover:-translate-y-1 
+                  active:bg-slate-700 active:translate-y-0 shadow-xl transition-all duration-300 text-white rounded-2xl ring-4 ring-transparent 
+                  hover:ring-blue-500/30 backdrop-blur-sm flex items-center justify-center gap-2"
                 >
                   ✨ Get Your Offer
                 </Button>
@@ -239,14 +259,19 @@ export default function DiscountPopup({ isSubmitted, setIsSubmitted }: isSubmitP
           </div>
 
           {/* Right Side - Offer Section */}
-          <div className="flex-1 bg-gradient-to-br from-slate-900 via-blue-900/95 to-slate-900 relative overflow-y-auto order-1 md:order-2 h-64 sm:h-80 md:h-auto rounded-3xl shadow-2xl before:absolute before:inset-0 before:bg-gradient-to-t before:from-slate-900/40 before:to-transparent before:rounded-3xl before:backdrop-blur-sm">
+          <div className="flex-1 bg-gradient-to-br from-slate-900 via-blue-900/95 to-slate-900 relative overflow-y-auto order-1 md:order-2 
+          h-64 sm:h-80 md:h-auto rounded-3xl shadow-2xl before:absolute before:inset-0 before:bg-gradient-to-t 
+          before:from-slate-900/40 before:to-transparent before:rounded-3xl before:backdrop-blur-sm">
             <div className="relative h-full flex flex-col items-center justify-center p-8 sm:p-10 md:p-12 text-white">
-              <h3 className="text-2xl sm:text-3xl md:text-4xl font-black mb-8 bg-gradient-to-r from-blue-300 via-white to-emerald-300 bg-clip-text text-transparent drop-shadow-2xl tracking-tight">
+              <h3 className="text-2xl sm:text-3xl md:text-4xl font-black mb-8 bg-gradient-to-r from-blue-300 via-white to-emerald-300 
+              bg-clip-text text-transparent drop-shadow-2xl tracking-tight">
                 Our Promise
               </h3>
               <div className="space-y-6 w-full max-w-sm">
-                <div className="group flex items-center p-6 bg-white/10 backdrop-blur-xl rounded-2xl hover:bg-white/20 hover:shadow-2xl hover:-translate-y-2 transition-all duration-400 border border-white/30">
-                  <div className="w-16 h-16 bg-blue-500/20 backdrop-blur-xl rounded-2xl flex items-center justify-center mr-4 shrink-0 border-2 border-blue-400/50 group-hover:scale-110 group-hover:border-blue-300">
+                <div className="group flex items-center p-6 bg-white/10 backdrop-blur-xl rounded-2xl hover:bg-white/20 
+                hover:shadow-2xl hover:-translate-y-2 transition-all duration-400 border border-white/30">
+                  <div className="w-16 h-16 bg-blue-500/20 backdrop-blur-xl rounded-2xl flex items-center justify-center mr-4 
+                  shrink-0 border-2 border-blue-400/50 group-hover:scale-110 group-hover:border-blue-300">
                     <Phone className="w-8 h-8 text-blue-300" />
                   </div>
                   <div>
@@ -255,8 +280,10 @@ export default function DiscountPopup({ isSubmitted, setIsSubmitted }: isSubmitP
                   </div>
                 </div>
 
-                <div className="group flex items-center p-6 bg-white/10 backdrop-blur-xl rounded-2xl hover:bg-white/20 hover:shadow-2xl hover:-translate-y-2 transition-all duration-400 border border-white/30">
-                  <div className="w-16 h-16 bg-emerald-500/20 backdrop-blur-xl rounded-2xl flex items-center justify-center mr-4 shrink-0 border-2 border-emerald-400/50 group-hover:scale-110 group-hover:border-emerald-300">
+                <div className="group flex items-center p-6 bg-white/10 backdrop-blur-xl rounded-2xl hover:bg-white/20 
+                hover:shadow-2xl hover:-translate-y-2 transition-all duration-400 border border-white/30">
+                  <div className="w-16 h-16 bg-emerald-500/20 backdrop-blur-xl rounded-2xl flex items-center justify-center mr-4 
+                  shrink-0 border-2 border-emerald-400/50 group-hover:scale-110 group-hover:border-emerald-300">
                     <User className="w-8 h-8 text-emerald-300" />
                   </div>
                   <div>
@@ -265,8 +292,10 @@ export default function DiscountPopup({ isSubmitted, setIsSubmitted }: isSubmitP
                   </div>
                 </div>
 
-                <div className="group flex items-center p-6 bg-white/10 backdrop-blur-xl rounded-2xl hover:bg-white/20 hover:shadow-2xl hover:-translate-y-2 transition-all duration-400 border border-white/30">
-                  <div className="w-16 h-16 bg-orange-500/20 backdrop-blur-xl rounded-2xl flex items-center justify-center mr-4 shrink-0 border-2 border-orange-400/50 group-hover:scale-110 group-hover:border-orange-300">
+                <div className="group flex items-center p-6 bg-white/10 backdrop-blur-xl rounded-2xl hover:bg-white/20 
+                hover:shadow-2xl hover:-translate-y-2 transition-all duration-400 border border-white/30">
+                  <div className="w-16 h-16 bg-orange-500/20 backdrop-blur-xl rounded-2xl flex items-center justify-center mr-4 
+                  shrink-0 border-2 border-orange-400/50 group-hover:scale-110 group-hover:border-orange-300">
                     <IndianRupee className="w-8 h-8 text-orange-300" />
                   </div>
                   <div>
@@ -279,19 +308,6 @@ export default function DiscountPopup({ isSubmitted, setIsSubmitted }: isSubmitP
           </div>
         </div>
       </div>
-
-      <style jsx global>{`
-        .recaptcha-container *,
-        .recaptcha-container .g-recaptcha,
-        .recaptcha-container .rc-anchor,
-        .recaptcha-container iframe {
-          backdrop-filter: none !important;
-          -webkit-backdrop-filter: none !important;
-          filter: none !important;
-          background: white !important;
-          isolation: isolate !important;
-        }
-      `}</style>
     </div>
   )
 }
