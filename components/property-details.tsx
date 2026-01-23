@@ -1,10 +1,10 @@
 import { Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Star, MapPin, Building2, Calendar, Home, Download, Check, Sparkles, Users } from "lucide-react"
+import { Star, MapPin, Building2, Calendar, Home, Download, CreditCard, Percent, Clock, Check } from "lucide-react"
 
 export default function PropertyDetails() {
   const projectData = {
-    name: "Vyom Sigma Avinea Hadapsar",
+    name: "Avinea By Vyom-Sigma Buildzone Hadapsar",
     developer: "Vyom Sigma Buildzone",
     location: "Hadapsar, Pune",
     rating: 4.8,
@@ -27,7 +27,7 @@ export default function PropertyDetails() {
       value: "G+5P+32 Storeys",
     },
     {
-      icon: Users,
+      icon: Building2,
       label: "Towers",
       value: projectData.towers,
     },
@@ -72,42 +72,84 @@ export default function PropertyDetails() {
   ]
 
   const towers = [
-    { name: "T1 - Avalon", status: "Ready" },
-    { name: "T2 - Avante", status: "Under Construction" },
-    { name: "T3 - Altus", status: "Ready" },
-    { name: "T4 - Amore", status: "Ready" },
-    { name: "T5 - Ariana", status: "Under Construction" },
-    { name: "T6 - Avana", status: "Ready" },
-    { name: "T7 - Altair", status: "Ready" }
-  ]
-
-  const highlights = [
-    "Mi-Van Construction Technology",
-    "65%+ Open Green Spaces", 
-    "Eco-Friendly Design",
-    "7 Iconic Towers",
-    "Prime Hadapsar Location"
+    { 
+      name: "T1 - Avalon", 
+      status: "Yet to Launch",
+      statusColor: "bg-gradient-to-r from-orange-500/10 to-orange-400/10 text-orange-800 border-orange-200/50",
+      phase: "Phase 3"
+    },
+    { 
+      name: "T2 - Avante", 
+      status: "Yet to Launch",
+      statusColor: "bg-gradient-to-r from-orange-500/10 to-orange-400/10 text-orange-800 border-orange-200/50",
+      phase: "Phase 3"
+    },
+    { 
+      name: "T3 - Altus", 
+      status: "3 BHK Selling Fast",
+      statusColor: "bg-gradient-to-r from-emerald-500/10 to-emerald-400/10 text-emerald-800 border-emerald-200/50",
+      phase: "Phase 1"
+    },
+    { 
+      name: "T4 - Amore", 
+      status: "2 BHK Sold Out",
+      statusColor: "bg-gradient-to-r from-red-500/10 to-red-400/10 text-red-800 border-red-200/50",
+      phase: "Phase 1"
+    },
+    { 
+      name: "T5 - Ariana", 
+      status: "Now Open",
+      statusColor: "bg-gradient-to-r from-blue-500/10 to-blue-400/10 text-blue-800 border-blue-200/50",
+      phase: "Phase 2"
+    },
+    { 
+      name: "T6 - Avana", 
+      status: "Now Open",
+      statusColor: "bg-gradient-to-r from-blue-500/10 to-blue-400/10 text-blue-800 border-blue-200/50",
+      phase: "Phase 2"
+    },
+    { 
+      name: "T7 - Altair", 
+      status: "Now Open",
+      statusColor: "bg-gradient-to-r from-blue-500/10 to-blue-400/10 text-blue-800 border-blue-200/50",
+      phase: "Phase 2"
+    }
   ]
 
   const paymentPlans = [
     {
       name: "30:70 Plan",
-      structure: "30% Down | 70% on Possession",
-      bestFor: "Balanced payments"
+      icon: Percent,
+      description: "30% Down | 70% on Possession",
+      benefits: "Best cash flow management"
     },
     {
-      name: "95:05 Plan", 
-      structure: "95% on Booking | 5% on Possession",
-      bestFor: "Maximum flexibility"
+      name: "20:30:50 CLP",
+      icon: CreditCard,
+      description: "20% Booking | 30% Construction | 50% Possession",
+      benefits: "Pay as you see progress"
     },
     {
-      name: "Custom Plan",
-      structure: "Tailored to your needs",
-      bestFor: "Personalized options"
+      name: "10:90 Flexi",
+      icon: Clock,
+      description: "10% Booking | 90% on Possession",
+      benefits: "Minimum upfront payment"
     }
   ]
 
-  const whatsappLink = "https://wa.me/919657119798?text=" + 
+  const whatsappNumber = "919657119798"
+
+  const getTowerWhatsappLink = (towerName) => {
+    const message = encodeURIComponent(`Hi, I am interested in ${towerName}. Please share brochure, floor plans & current offers.`);
+    return `https://wa.me/${whatsappNumber}?text=${message}`;
+  }
+
+  const getPaymentPlanWhatsappLink = (planName) => {
+    const message = encodeURIComponent(`Hi, interested in ${planName} for Avinea Hadapsar. Please share complete payment plan details & current offers.`);
+    return `https://wa.me/${whatsappNumber}?text=${message}`;
+  }
+
+  const whatsappLink = "https://wa.me/" + whatsappNumber + "?text=" + 
     encodeURIComponent(`Hi, interested in Vyom Sigma Avinea Hadapsar. Please share brochure, floor plans & current offers for ${projectData.location}`);
 
   return (
@@ -150,7 +192,7 @@ export default function PropertyDetails() {
         {/* PROJECT HIGHLIGHTS */}
         <section className="relative group">
           <h2 className="text-4xl md:text-5xl font-serif font-black bg-gradient-to-r from-slate-900 to-emerald-900 bg-clip-text text-transparent mb-12">
-            Project Highlights ✨
+            Project Highlights
           </h2>
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {keyStats.map((stat, idx) => {
@@ -196,51 +238,135 @@ export default function PropertyDetails() {
           </div>
         </section>
 
-        {/* PRICING HERO */}
+        {/* PRICING HERO WITH PAYMENT PLANS */}
         <section className="relative group">
           <div className="rounded-3xl bg-gradient-to-br from-slate-900 via-emerald-900/90 to-slate-900/80 backdrop-blur-xl text-white shadow-3xl overflow-hidden">
-            <div className="p-12 text-center relative z-10">
-              <div className="inline-flex items-center gap-3 bg-white/20 backdrop-blur-xl px-8 py-4 rounded-3xl border-2 border-white/40 mb-8">
-                <Sparkles className="h-6 w-6 text-emerald-300 animate-spin" />
-                <span className="text-xl font-black tracking-widest">BOOKING STARTS AT</span>
+            <div className="p-12 lg:p-20 relative z-10">
+              <div className="text-center mb-16">
+                <div className="inline-flex items-center gap-3 bg-white/20 backdrop-blur-xl px-8 py-4 rounded-3xl border-2 border-white/40 mb-8">
+                  <Check className="h-6 w-6 text-emerald-300 animate-pulse" />
+                  <span className="text-xl font-black tracking-widest">BOOKING STARTS AT</span>
+                </div>
+                <h2 className="text-5xl md:text-7xl lg:text-8xl font-black bg-gradient-to-r from-emerald-400 via-white to-emerald-500 bg-clip-text text-transparent drop-shadow-4xl mb-6">
+                  {projectData.bookingAmount}
+                </h2>
+                <p className="text-2xl font-bold text-emerald-100 mb-12">Special Launch Offers Available</p>
               </div>
-              <h2 className="text-5xl md:text-7xl lg:text-8xl font-black bg-gradient-to-r from-emerald-400 via-white to-emerald-500 bg-clip-text text-transparent drop-shadow-4xl mb-6">
-                {projectData.bookingAmount}
-              </h2>
-              <p className="text-2xl font-bold text-emerald-100 mb-12">Special Launch Offers Available</p>
               
-              <div className="flex flex-col lg:flex-row items-center justify-center gap-12">
-                <div>
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div className="lg:col-span-2">
                   <p className="text-4xl md:text-6xl font-black bg-gradient-to-r from-emerald-400 via-white to-emerald-500 bg-clip-text text-transparent">
                     {projectData.priceStart} Onwards
                   </p>
                   <p className="text-lg text-emerald-200 mt-2">2, 3, 4 & 5 BHK Homes</p>
+                  <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="block mt-8 group">
+                    <button className="group/btn flex items-center gap-4 bg-white text-slate-900 px-12 py-6 text-xl font-black rounded-3xl shadow-4xl hover:shadow-[0_25px_80px_rgba(16,185,129,0.6)] hover:-translate-y-2 transition-all duration-700 border-4 border-white/50 backdrop-blur-xl w-full md:w-auto justify-center">
+                      <Download className="h-6 w-6 group-hover/btn:rotate-180 transition-all" />
+                      Download Brochure
+                    </button>
+                  </a>
                 </div>
-                <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="group">
-                  <button className="group/btn flex items-center gap-4 bg-white text-slate-900 px-12 py-6 text-xl font-black rounded-3xl shadow-4xl hover:shadow-[0_25px_80px_rgba(16,185,129,0.6)] hover:-translate-y-2 transition-all duration-700 border-4 border-white/50 backdrop-blur-xl">
-                    <Download className="h-6 w-6 group-hover/btn:rotate-180 transition-all" />
-                    Download Brochure
-                  </button>
-                </a>
+                
+                {/* Payment Plans in Hero */}
+                <div className="space-y-4 lg:col-span-2">
+                  <h3 className="text-2xl font-black tracking-wider text-emerald-100 uppercase mb-6 flex items-center gap-3">
+                    <CreditCard className="h-7 w-7" />
+                    Flexible Payment Plans
+                  </h3>
+                  <div className="space-y-3">
+                    {paymentPlans.map((plan, idx) => {
+                      const IconComponent = plan.icon
+                      return (
+                        <a 
+                          key={idx}
+                          href={getPaymentPlanWhatsappLink(plan.name)}
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="group flex items-center gap-4 p-4 bg-white/10 backdrop-blur-xl rounded-2xl border border-white/30 hover:bg-white/20 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 cursor-pointer"
+                        >
+                          <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <IconComponent className="h-6 w-6 text-emerald-200" />
+                          </div>
+                          <div className="flex-1 min-w-0">
+                            <div className="font-bold text-lg text-white group-hover:text-emerald-100 transition-colors">
+                              {plan.name}
+                            </div>
+                            <div className="text-emerald-100 text-sm font-medium">{plan.description}</div>
+                          </div>
+                          <Check className="h-5 w-5 text-emerald-300 group-hover:animate-bounce transition-all" />
+                        </a>
+                      )
+                    })}
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* TOWERS GRID */}
+        {/* TOWERS GRID - Clean Professional NO Icons/Emojis */}
         <section>
           <h2 className="text-4xl md:text-5xl font-serif font-black bg-gradient-to-r from-slate-900 to-emerald-900 bg-clip-text text-transparent mb-12 text-center">
-            7 Iconic Towers
+            Tower Status & Phases
           </h2>
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-            {towers.map((tower, idx) => (
-              <Card key={idx} className="p-8 text-center border-emerald-200/50 hover:shadow-2xl hover:border-emerald-400/70 transition-all group">
-                <h3 className="text-2xl font-black text-slate-900 mb-4">{tower.name}</h3>
-                <Badge className={`font-bold ${tower.status === 'Ready' ? 'bg-emerald-100 text-emerald-800' : 'bg-blue-100 text-blue-800'}`}>
-                  {tower.status}
-                </Badge>
-              </Card>
-            ))}
+          <div className="max-w-6xl mx-auto space-y-12">
+            {/* First Row - 4 Towers */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 justify-items-center">
+              {towers.slice(0, 4).map((tower, idx) => (
+                <a 
+                  key={`first-row-${idx}`}
+                  href={getTowerWhatsappLink(tower.name)}
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="w-full max-w-xs group"
+                >
+                  <Card className="p-8 text-center border-0 bg-gradient-to-b from-white/95 to-slate-50/80 backdrop-blur-xl h-full max-h-80 hover:shadow-2xl hover:shadow-emerald-500/25 hover:border-emerald-300/50 hover:-translate-y-2 transition-all duration-500 cursor-pointer rounded-3xl shadow-xl border border-slate-200/50">
+                    <div className="h-full flex flex-col justify-center space-y-6">
+                      <div className="space-y-3">
+                        <h3 className="text-2xl font-black bg-gradient-to-r from-slate-900 to-emerald-900 bg-clip-text text-transparent group-hover:scale-105 transition-all">
+                          {tower.name}
+                        </h3>
+                        <div className="text-xs font-bold text-emerald-600 uppercase tracking-widest bg-emerald-50/80 px-4 py-2 rounded-full inline-block shadow-sm">
+                          {tower.phase}
+                        </div>
+                      </div>
+                      <Badge className={`w-full font-bold text-base px-6 py-4 shadow-xl border-2 bg-white/90 backdrop-blur-xl ${tower.statusColor} hover:shadow-emerald-500/20 transition-all group-hover:scale-[1.02] group-hover:shadow-2xl`}>
+                        <span className="font-semibold leading-tight">{tower.status}</span>
+                      </Badge>
+                    </div>
+                  </Card>
+                </a>
+              ))}
+            </div>
+
+            {/* Second Row - 3 Towers Center Aligned */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 justify-items-center mx-auto" style={{ maxWidth: '700px' }}>
+              {towers.slice(4, 7).map((tower, idx) => (
+                <a 
+                  key={`second-row-${idx}`}
+                  href={getTowerWhatsappLink(tower.name)}
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="w-full max-w-xs group"
+                >
+                  <Card className="p-8 text-center border-0 bg-gradient-to-b from-white/95 to-slate-50/80 backdrop-blur-xl h-full max-h-80 hover:shadow-2xl hover:shadow-emerald-500/25 hover:border-emerald-300/50 hover:-translate-y-2 transition-all duration-500 cursor-pointer rounded-3xl shadow-xl border border-slate-200/50">
+                    <div className="h-full flex flex-col justify-center space-y-6">
+                      <div className="space-y-3">
+                        <h3 className="text-2xl font-black bg-gradient-to-r from-slate-900 to-emerald-900 bg-clip-text text-transparent group-hover:scale-105 transition-all">
+                          {tower.name}
+                        </h3>
+                        <div className="text-xs font-bold text-emerald-600 uppercase tracking-widest bg-emerald-50/80 px-4 py-2 rounded-full inline-block shadow-sm">
+                          {tower.phase}
+                        </div>
+                      </div>
+                      <Badge className={`w-full font-bold text-base px-6 py-4 shadow-xl border-2 bg-white/90 backdrop-blur-xl ${tower.statusColor} hover:shadow-emerald-500/20 transition-all group-hover:scale-[1.02] group-hover:shadow-2xl`}>
+                        <span className="font-semibold leading-tight">{tower.status}</span>
+                      </Badge>
+                    </div>
+                  </Card>
+                </a>
+              ))}
+            </div>
           </div>
         </section>
       </div>
