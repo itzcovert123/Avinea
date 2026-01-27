@@ -118,23 +118,14 @@ export default function PropertyDetails() {
 
   const paymentPlans = [
     {
-      name: "30:70 Plan",
+      name: "30:70 Payment Plan",
       icon: Percent,
-      description: "30% Down | 70% on Possession",
-      benefits: "Best cash flow management"
     },
     {
-      name: "20:30:50 CLP",
+      name: "95:05 Down Payment Plan",
       icon: CreditCard,
-      description: "20% Booking | 30% Construction | 50% Possession",
-      benefits: "Pay as you see progress"
     },
-    {
-      name: "10:90 Flexi",
-      icon: Clock,
-      description: "10% Booking | 90% on Possession",
-      benefits: "Minimum upfront payment"
-    }
+  
   ]
 
   const whatsappNumber = "919657119798"

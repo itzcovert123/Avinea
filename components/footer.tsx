@@ -192,13 +192,12 @@ export default function Footer() {
         <div className={`border-t border-white/20 pt-12 ${entranceClasses}`}>
           <div className="max-w-4xl mx-auto text-center">
             <p className="text-xs md:text-sm leading-relaxed text-primary-foreground/75 mb-6">
-              <strong>This project is RERA registered.</strong> | Authorized Channel Partner | 
+              <strong>This project is RERA registered.</strong> | Authorized Channel Partner | The information provided on this website is intended exclusively for informational purposes and should not be construed as an offer of services. This site is managed by a RERA authorized real estate agent. Vyom Sigma Avinea
               Channel Partner RERA Number: <strong>A52100000378</strong> | 
               Project RERA Number: <strong>P52100079047</strong> <strong>PR1261012501542</strong>
             </p>
-            <p className="text-xs text-primary-foreground/60 leading-relaxed mb-8 max-w-3xl mx-auto">
-              This website serves as an informational portal managed by a RERA authorized real estate agent. 
-              Prices are subject to change. Images are representational. For latest information, contact us directly.
+            <p className="text-xs text-primary-foreground/60 leading-relaxed mb-8 max-w-3xl mx-auto">The pricing information presented on this website is subject to alteration without advance notification, and the assurance of property availability cannot be guaranteed. The images showcased on this website are for representational purposes only and may not accurately reflect the actual properties. We may share your data with Real Estate Regulatory Authority (RERA) registered Developers for further processing as necessary. Additionally, we may send updates and information to the mobile number or email address registered with us. All rights reserved. The content, design, and information on this website are protected by copyright and other intellectual property rights. Any unauthorized use or reproduction of the content may violate applicable laws. For accurate and up-to-date information regarding services, pricing, availability, and any other details, it is recommended to contact us directly through the provided contact information on this website.
+ Thank you for visiting our website.
             </p>
             <p className="text-sm font-medium text-primary-foreground/80">
               © 2026 Avinea Hadapsar. All rights reserved.
