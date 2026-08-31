@@ -15,7 +15,7 @@ export default function StickyForm() {
     if (phone.length !== 10) return toast.error("Enter 10 digit phone number")
 
     const whatsappNumber = "919657119798"
-    const message = `Hi, I want to enquire about Vyom Sigma Avinea Hadapsar.
+    const message = `Hi, I want to enquire about Avinea by Vyom Buildzone Hadapsar.
 Name: ${name}
 Email: ${email}
 Phone: ${phone}`
@@ -24,7 +24,7 @@ Phone: ${phone}`
   }
 
   const handleMobileEnquire = () => {
-    window.location.href = `https://wa.me/919657119798?text=${encodeURIComponent("Hi, I want to enquire about Vyom Sigma Avinea Hadapsar.")}`
+    window.location.href = `https://wa.me/919657119798?text=${encodeURIComponent("Hi, I want to enquire about Avinea by Vyom Buildzone Hadapsar.")}`
   }
 
   return (

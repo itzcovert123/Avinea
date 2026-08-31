@@ -5,7 +5,7 @@ export default function JsonLd() {
       {
         "@type": "ApartmentComplex",
         "@id": 'https://avinea-hadpsar.com/',
-        "name": "Vyom Sigma Avinea",
+        "name": "Avinea by Vyom Buildzone",
         "description": "An ultra-luxury residential project in Hadapsar, Pune featuring 7 towers (G+5P+32) with Mi-Van construction and 65% open green space.",
         "url": 'https://avinea-hadpsar.com/',
         "address": {
@@ -33,14 +33,14 @@ export default function JsonLd() {
       {
         "@type": "RealEstateListing",
         "@id": 'https://avinea-hadpsar.com/',
-        "name": "Luxury Apartments for Sale in Hadapsar - Avinea Vyom Sigma",
+        "name": "Luxury Apartments for Sale in Hadapsar - Avinea by Vyom Buildzone",
         "mainEntity": { "@id": 'https://avinea-hadpsar.com/' },
         "datePosted": "2026-01-21",
         "offers": {
           "@type": "AggregateOffer",
           "priceCurrency": "INR",
           "lowPrice": "12900000",
-          "highPrice": "34500000",
+          "highPrice": "36600000",
           "offerCount": "500",
           "availability": "https://schema.org/InStock"
         }
@@ -48,12 +48,11 @@ export default function JsonLd() {
       {
         "@type": "RealEstateAgent",
         "@id": 'https://avinea-hadpsar.com/',
-        "name": "Vyom Sigma Buildzone",
-        "description": "A strategic alliance between Vyom Buildcon and Sigma Buildzone specializing in sustainable luxury residences.",
+        "name": "Vyom Buildzone",
+        "description": "Sustainable luxury residences in Hadapsar, Pune by Vyom Buildzone.",
         "url": 'https://avinea-hadpsar.com/',
         "parentOrganization": [
-          { "@type": "Organization", "name": "Vyom Buildcon" },
-          { "@type": "Organization", "name": "Sigma Buildzone" }
+          { "@type": "Organization", "name": "Vyom Buildzone" }
         ]
       },
       {
@@ -61,15 +60,15 @@ export default function JsonLd() {
         "mainEntity": [
           {
             "@type": "Question",
-            "name": "What is the configuration and carpet area of the apartments at Vyom Sigma Avinea?",
+            "name": "What is the configuration and carpet area of the apartments at Avinea by Vyom Buildzone?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Vyom Sigma Avinea offers 2 BHK, 3 BHK, 4 BHK, and 5 BHK configurations. Carpet areas range from 940 sq. ft. up to 2,500 sq. ft."
+              "text": "Avinea by Vyom Buildzone offers 2 BHK, 3 BHK, 4 BHK, 4.5 BHK, and 5.5 BHK configurations. Carpet areas range from 946 sq. ft. up to 2,470 sq. ft."
             }
           },
           {
             "@type": "Question",
-            "name": "Is Vyom Sigma Avinea RERA registered?",
+            "name": "Is Avinea by Vyom Buildzone RERA registered?",
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "Yes, the project is RERA registered under No. P52100079047 and PR1261012501542."

@@ -7,7 +7,7 @@ import { MapPin } from "lucide-react"
 
 const projects = [
   {
-    name: "Avinea by Vyom-Sigma buildzone, Hadapsar",
+    name: "Avinea by Vyom Buildzone, Hadapsar",
     directionsLink: "https://www.google.com/maps/search/avinea+vyom+sigma+hadapsar/@18.5096804,73.9389567,1052m/data=!3m2!1e3!4b1?entry=ttu&g_ep=EgoyMDI2MDExMy4wIKXMDSoASAFQAw%3D%3D",
     mapsLink: "https://www.google.com/maps/search/avinea+vyom+sigma+hadapsar/@18.5096804,73.9389567,1052m/data=!3m2!1e3!4b1?entry=ttu&g_ep=EgoyMDI2MDExMy4wIKXMDSoASAFQAw%3D%3D",
 

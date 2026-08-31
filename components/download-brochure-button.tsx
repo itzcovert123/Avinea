@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button"
 
 export default function DownloadBrochureButton() {
   const phone = "9657119798"
-  const message = "Send me a brochure of Vyom Sigma Avinea Hadapsar."
+  const message = "Send me a brochure of Avinea by Vyom Buildzone Hadapsar."
 
   const whatsappUrl = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`
 

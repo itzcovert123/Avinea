@@ -40,7 +40,7 @@ export default function Navigation() {
 
   const openWhatsApp = () => {
     window.open(
-      "https://wa.me/919657119798?text=Give%20me%20details%20of%20Avinea%20Project",
+      "https://wa.me/919657119798?text=Give%20me%20details%20of%20Avinea%20by%20Vyom%20Buildzone",
       "_blank"
     )
   }
@@ -62,7 +62,7 @@ export default function Navigation() {
               <div className="rounded-md flex items-center justify-center">
                 <Image
                   src="/logo.webp"
-                  alt="Company Logo"
+                  alt="Avinea by Vyom Buildzone"
                   width={140}
                   height={50}
                   className="h-10 w-auto object-contain"

@@ -4,14 +4,14 @@ import { Star, MapPin, Building2, Calendar, Home, Download, CreditCard, Percent,
 
 export default function PropertyDetails() {
   const projectData = {
-    name: "Avinea By Vyom-Sigma Buildzone Hadapsar",
-    developer: "Vyom Sigma Buildzone",
+    name: "Avinea by Vyom Buildzone Hadapsar",
+    developer: "Vyom Buildzone",
     location: "Hadapsar, Pune",
     rating: 4.8,
     reviews: 156,
     bookingAmount: "2 Lacs",
     priceStart: "₹1.29 Cr*",
-    towers: "7  Towers",
+    towers: "7 Towers",
     acres: "10.5 Acres"
   }
 
@@ -41,41 +41,57 @@ export default function PropertyDetails() {
   const configurations = [
     { 
       bhk: "2 BHK", 
-      carpet: "946 sq.ft", 
-      price: "₹1.29 Cr* Onwards", 
-      type: "Premium"
+      carpet: "946 / 960 sq.ft", 
+      price: "₹1.29 Cr / ₹1.36 Cr", 
+      type: "Sold Out",
+      soldOut: true,
+      parking: "1 Car Park"
     },
     { 
       bhk: "3 BHK", 
-      carpet: "1213 - 1262 sq.ft", 
-      price: "₹1.69 - 1.76 Cr*", 
-      type: "Luxury"
+      carpet: "1213 / 1375 sq.ft", 
+      price: "₹1.77 Cr / ₹2.02 Cr", 
+      type: "2 Car Parks",
+      soldOut: false,
+      parking: "2 Car Parks"
     },
     { 
       bhk: "4 BHK", 
       carpet: "1780 sq.ft", 
-      price: "₹2.42 Cr*", 
-      type: "Ultra-Luxury"
+      price: "₹2.57 Cr", 
+      type: "2 Car Parks",
+      soldOut: false,
+      parking: "2 Car Parks"
     },
     { 
-      bhk: "6.5 BHK Jodi", 
-      carpet: "Up to 2500+ sq.ft", 
-      price: "₹3.45 Cr+*", 
-      type: "Couplet"
+      bhk: "4.5 BHK (Couplet)", 
+      carpet: "1940 sq.ft", 
+      price: "₹2.72 Cr", 
+      type: "Sold Out",
+      soldOut: true,
+      parking: "2 Car Parks"
+    },
+    { 
+      bhk: "5.5 BHK (Couplet)", 
+      carpet: "2470 sq.ft", 
+      price: "₹3.66 Cr", 
+      type: "Couplet",
+      soldOut: false,
+      parking: "2 Car Parks"
     }
   ]
 
   const towers = [
     { 
       name: "T1 - Avalon", 
-      status: "Yet to Launch",
-      statusColor: "bg-gradient-to-r from-orange-500/10 to-orange-400/10 text-orange-800 border-orange-200/50",
+      status: "Opening Soon",
+      statusColor: "bg-gradient-to-r from-amber-500/10 to-amber-400/10 text-amber-800 border-amber-200/50",
       phase: "Phase 3"
     },
     { 
       name: "T2 - Avante", 
-      status: "Yet to Launch",
-      statusColor: "bg-gradient-to-r from-orange-500/10 to-orange-400/10 text-orange-800 border-orange-200/50",
+      status: "Opening Soon",
+      statusColor: "bg-gradient-to-r from-amber-500/10 to-amber-400/10 text-amber-800 border-amber-200/50",
       phase: "Phase 3"
     },
     { 
@@ -104,8 +120,8 @@ export default function PropertyDetails() {
     },
     { 
       name: "T7 - Altair", 
-      status: "Now Open",
-      statusColor: "bg-gradient-to-r from-blue-500/10 to-blue-400/10 text-blue-800 border-blue-200/50",
+      status: "2 BHK Sold Out",
+      statusColor: "bg-gradient-to-r from-red-500/10 to-red-400/10 text-red-800 border-red-200/50",
       phase: "Phase 2"
     }
   ]
@@ -119,7 +135,6 @@ export default function PropertyDetails() {
       name: "05:95 Flexi Payment",
       icon: CreditCard,
     },
-  
   ]
 
   const whatsappNumber = "919657119798"
@@ -135,7 +150,7 @@ export default function PropertyDetails() {
   }
 
   const whatsappLink = "https://wa.me/" + whatsappNumber + "?text=" + 
-    encodeURIComponent(`Hi, interested in Vyom Sigma Avinea Hadapsar. Please share brochure, floor plans & current offers for ${projectData.location}`);
+    encodeURIComponent(`Hi, interested in Avinea by Vyom Buildzone Hadapsar. Please share brochure, floor plans & current offers for ${projectData.location}`);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-emerald-50/30">
@@ -148,8 +163,7 @@ export default function PropertyDetails() {
                 {projectData.name}
               </h1>
               <Badge className="mt-4 text-sm md:text-lg bg-emerald-100 text-emerald-800 border-emerald-200 font-semibold px-4 md:px-6 py-2">
-                {projectData.developer} 
-                <span className="ml-2 text-[10px] md:text-xs font-normal">(Vyom Buildcon + Sigma Buildzone)</span>
+                By {projectData.developer}
               </Badge>
             </div>
 
@@ -208,14 +222,17 @@ export default function PropertyDetails() {
             {configurations.map((config, idx) => (
               <Card key={idx} className="group p-6 md:p-8 border-emerald-200/50 hover:shadow-2xl hover:-translate-y-2 rounded-2xl shadow-xl border transition-all duration-500 overflow-hidden">
                 <div className="relative z-10 space-y-3 md:space-y-4">
-                  <Badge className="bg-gradient-to-r from-emerald-500/20 to-emerald-400/20 text-emerald-700 border-emerald-200 font-bold">
+                  <Badge className={config.soldOut ? "bg-red-500/10 text-red-700 border-red-200 font-bold" : "bg-gradient-to-r from-emerald-500/20 to-emerald-400/20 text-emerald-700 border-emerald-200 font-bold"}>
                     {config.type}
                   </Badge>
                   <h3 className="text-xl md:text-2xl font-black text-slate-900">{config.bhk}</h3>
                   <p className="text-2xl md:text-3xl font-black bg-gradient-to-r from-slate-900 to-emerald-900 bg-clip-text text-transparent">
                     {config.price}
                   </p>
-                  <p className="text-base md:text-lg text-slate-600 font-medium">{config.carpet}</p>
+                  <div className="flex justify-between items-center text-sm md:text-base text-slate-600 font-medium">
+                    <span>{config.carpet}</span>
+                    <span className="text-xs bg-slate-100 px-2 py-0.5 rounded text-slate-700 font-semibold">{config.parking}</span>
+                  </div>
                 </div>
               </Card>
             ))}
@@ -242,7 +259,7 @@ export default function PropertyDetails() {
                   <p className="text-3xl sm:text-4xl md:text-6xl font-black bg-gradient-to-r from-emerald-400 via-white to-emerald-500 bg-clip-text text-transparent">
                     {projectData.priceStart} Onwards
                   </p>
-                  <p className="text-base md:text-lg text-emerald-200">2, 3, 4 & 6.5 BHK Homes</p>
+                  <p className="text-base md:text-lg text-emerald-200">2, 3, 4, 4.5 & 5.5 BHK Homes</p>
                   <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="block mt-4 md:mt-8 group">
                     <button className="flex items-center gap-3 md:gap-4 bg-white text-slate-900 px-6 md:px-12 py-3 md:py-6 text-lg md:text-xl font-black rounded-2xl md:rounded-3xl shadow-xl hover:-translate-y-1 transition-all w-full md:w-auto justify-center">
                       <Download className="h-5 w-5 md:h-6 md:w-6" />

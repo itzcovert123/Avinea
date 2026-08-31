@@ -15,17 +15,17 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://avinea-hadpsar.com'), 
   
   title: {
-    default: 'Avinea Vyom Sigma Hadapsar | Luxury 2, 3, 4 & 6.5 BHK Apartments',
-    template: '%s | Avinea Vyom Sigma Pune',
+    default: 'Avinea by Vyom Buildzone Hadapsar | Luxury 2, 3, 4, 4.5 & 5.5 BHK Apartments',
+    template: '%s | Avinea by Vyom Buildzone Pune',
   },
-  description: 'Experience ultra-luxury at Avinea Vyom Sigma by Vyom Sigma Buildcon. G+32 storeys in Hadapsar, Pune with 55+ amenities.',
-  keywords: ['avinya vyom sigma', 'avinea vyom sigma hadapsar', 'pune apartments'],
+  description: 'Experience ultra-luxury at Avinea by Vyom Buildzone. G+32 storeys in Hadapsar, Pune with 55+ amenities.',
+  keywords: ['avinea hadapsar', 'avinea by vyom buildzone', 'vyom buildzone', 'pune apartments', 'luxury apartments hadapsar'],
   
   openGraph: {
-    title: 'Avinea Vyom Sigma | Ultra-Luxury Living in Hadapsar',
+    title: 'Avinea by Vyom Buildzone | Ultra-Luxury Living in Hadapsar',
     description: '7 Tectonic Towers with 115m glass elevation.',
     url: 'https://avinea-hadpsar.com/',
-    siteName: 'Avinea Vyom Sigma',
+    siteName: 'Avinea by Vyom Buildzone',
     images: [{ url: '/images/avinea-vyom-sigma-exterior.jpg' }], // Now resolves correctly
     locale: 'en_IN',
     type: 'website',

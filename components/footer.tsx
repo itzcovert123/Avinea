@@ -37,27 +37,27 @@ export default function Footer() {
     {
       id: "config",
       question: "What is the configuration and carpet area of the apartments?",
-      answer: "Vyom Sigma Avinea offers a variety of configurations ranging from 2 BHK, 3 BHK, 4 BHK, 5 BHK and 6.5 BHK . The carpet areas range from 940 sq. ft. to 2500+ sq. ft., catering to diverse needs for different family sizes."
+      answer: "Avinea by Vyom Buildzone offers a variety of configurations ranging from 2 BHK, 3 BHK, 4 BHK, 4.5 BHK (Couplet) and 5.5 BHK (Couplet). The carpet areas range from 946 sq. ft. to 2,470 sq. ft., catering to diverse needs for different family sizes."
     },
     {
       id: "amenities",
-      question: "What are the key amenities offered at Vyom Sigma Avinea?",
-      answer: "Vyom Sigma Avinea features over 55+ luxurious amenities, including wellness and fitness zones (gym, yoga hall, swimming pools), children's play areas, adventure parks, music room, multiple dining options like grill & dine café and BBQ court, sports facilities including badminton courts, cricket pitch, multi-purpose courts, and eco-friendly features like rainwater harvesting, sewage treatment, and renewable energy systems."
+      question: "What are the key amenities offered at Avinea by Vyom Buildzone?",
+      answer: "Avinea by Vyom Buildzone features over 55+ luxurious amenities, including wellness and fitness zones (gym, yoga hall, swimming pools), children's play areas, adventure parks, music room, multiple dining options like grill & dine café and BBQ court, sports facilities including badminton courts, cricket pitch, multi-purpose courts, and eco-friendly features like rainwater harvesting, sewage treatment, and renewable energy systems."
     },
     {
       id: "possession",
-      question: "What is the possession date for the Vyom Sigma Avinea project?",
-      answer: "The target possession for Avinea by Vyom Sigma is in 3 years (Dec 2028 onwards)."
+      question: "What is the possession date for the Avinea by Vyom Buildzone project?",
+      answer: "The target possession for Avinea by Vyom Buildzone is in 3 years (Dec 2028 onwards)."
     },
     {
       id: "unique",
-      question: "What makes Vyom Sigma Avinea unique in terms of construction and design?",
-      answer: "Vyom Sigma Avinea employs Mi-van construction technology, which ensures sustainable, eco-friendly homes. The apartments are designed with 3-side open flats for better ventilation and natural light. The project also boasts 115-meter tall towers with full glass elevations."
+      question: "What makes Avinea by Vyom Buildzone unique in terms of construction and design?",
+      answer: "Avinea by Vyom Buildzone employs Mi-van construction technology, which ensures sustainable, eco-friendly homes. The apartments are designed with 3-side open flats for better ventilation and natural light. The project also boasts 115-meter tall towers with full glass elevations."
     },
     {
       id: "rera",
-      question: "Is Vyom Sigma Avinea RERA registered?",
-      answer: "Yes, Vyom Sigma Avinea is RERA registered under RERA No. P52100079047 and PR1261012501542. It adheres to all regulatory requirements and offers legal assurance to the buyers."
+      question: "Is Avinea by Vyom Buildzone RERA registered?",
+      answer: "Yes, Avinea by Vyom Buildzone is RERA registered under RERA No. P52100079047 and PR1261012501542. It adheres to all regulatory requirements and offers legal assurance to the buyers."
     }
   ]
 
@@ -72,7 +72,7 @@ export default function Footer() {
               <div className="bg-white/10 backdrop-blur-sm p-3 rounded-xl flex items-center justify-center shadow-lg">
                 <Image
                   src="/logo.webp"
-                  alt="Avinea Logo"
+                  alt="Avinea by Vyom Buildzone Logo"
                   width={200}
                   height={56}
                   className="h-16 w-auto rounded-lg object-contain"
@@ -83,7 +83,7 @@ export default function Footer() {
             <div className="space-y-4 text-primary-foreground/90">
               <div className="flex items-start space-x-3 p-3 bg-white/5 rounded-xl">
                 <MapPin className="w-5 h-5 mt-0.5 flex-shrink-0 text-white/80" />
-                <span className="text-sm leading-relaxed">Vyom Sigma Avinea</span>
+                <span className="text-sm leading-relaxed">Avinea by Vyom Buildzone</span>
               </div>
               <div className="flex items-start space-x-3 p-3 bg-white/5 rounded-xl">
                 <Phone className="w-5 h-5 mt-0.5 flex-shrink-0 text-white/80" />
@@ -114,7 +114,7 @@ export default function Footer() {
               <span className="font-semibold text-lg">Frequently Asked Questions</span>
             </div>
             <p className="text-primary-foreground/70 text-lg leading-relaxed">
-              Find answers to the most common questions about Vyom Sigma Avinea project
+              Find answers to the most common questions about Avinea by Vyom Buildzone project
             </p>
           </div>
 
@@ -183,7 +183,7 @@ export default function Footer() {
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               className="w-full h-[450px] md:h-[500px]"
-              title="Vyom Sigma Avinea Location"
+              title="Avinea by Vyom Buildzone Location"
             />
           </div>
         </div>
@@ -192,7 +192,7 @@ export default function Footer() {
         <div className={`border-t border-white/20 pt-12 ${entranceClasses}`}>
           <div className="max-w-4xl mx-auto text-center">
             <p className="text-xs md:text-sm leading-relaxed text-primary-foreground/75 mb-6">
-              <strong>This project is RERA registered.</strong> | Authorized Channel Partner | The information provided on this website is intended exclusively for informational purposes and should not be construed as an offer of services. This site is managed by a RERA authorized real estate agent. Vyom Sigma Avinea
+              <strong>This project is RERA registered.</strong> | Authorized Channel Partner | The information provided on this website is intended exclusively for informational purposes and should not be construed as an offer of services. This site is managed by a RERA authorized real estate agent. Avinea by Vyom Buildzone
               Channel Partner RERA Number: <strong>A52100000378</strong> | 
               Project RERA Number: <strong>P52100079047</strong> <strong>PR1261012501542</strong>
             </p>

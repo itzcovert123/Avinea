@@ -8,7 +8,7 @@ export default function FloatingActionButtons() {
       label: "WhatsApp",
       color: "bg-green-500 hover:bg-green-600 focus:bg-green-600",
       href: `https://wa.me/9657119798?text=${encodeURIComponent(
-        "Send me details of Vyom Sigma Avinea Hadapsar"
+        "Send me details of Avinea by Vyom Buildzone Hadapsar"
       )}`,
       target: "_blank",
     },
